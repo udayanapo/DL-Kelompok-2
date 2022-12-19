@@ -20,12 +20,15 @@ def flask_app():
 
         # instantiate keyword spotting service singleton and get prediction
         kss = prediction.Keyword_Spotting_Service_LSTM()
-        predicted_genre = kss.predict(file_name)
+        predicted_genre, confidence_value = kss.predict(file_name)
 
         os.remove(file_name)
 
         #return result as JSON
-        result = {"genre": predicted_genre}
+        result = {
+            "confidence" : confidence_value.item(),
+            "genre" : predicted_genre,
+        }
         return jsonify(result)
 
     @app.route('/predict/gru', methods=['POST'])
@@ -38,12 +41,15 @@ def flask_app():
 
         # instantiate keyword spotting service singleton and get prediction
         kss = prediction.Keyword_Spotting_Service_GRU()
-        predicted_genre = kss.predict(file_name)
+        predicted_genre, confidence_value = kss.predict(file_name)
 
         os.remove(file_name)
 
         #return result as JSON
-        result = {"genre": predicted_genre}
+        result = {
+            "confidence" : confidence_value.item(),
+            "genre" : predicted_genre,
+        }
         return jsonify(result)
     return app
 

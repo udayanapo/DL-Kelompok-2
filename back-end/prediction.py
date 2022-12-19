@@ -47,7 +47,9 @@ class _Keyword_Spotting_Service:
         predictions = self.model.predict(MFCCs)
         predicted_index = np.argmax(predictions)
         predicted_keyword = self._mapping[predicted_index]
-        return predicted_keyword
+        predictions_confidence = np.max(predictions)
+        
+        return predicted_keyword, predictions_confidence
 
 
     def preprocess(self, file_path, num_mfcc=13, n_fft=2048, hop_length=512):
@@ -67,7 +69,7 @@ class _Keyword_Spotting_Service:
             signal = signal[:SAMPLES_TO_CONSIDER]
 
             # extract MFCCs
-            MFCCs = librosa.feature.mfcc(signal, sample_rate, n_mfcc=num_mfcc, n_fft=n_fft,
+            MFCCs = librosa.feature.mfcc(y = signal, sr = sample_rate, n_mfcc=num_mfcc, n_fft=n_fft,
                                          hop_length=hop_length)
         return MFCCs.T
 
