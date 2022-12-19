@@ -1,0 +1,82 @@
+{
+	"info": {
+		"_postman_id": "653b1a26-4261-4217-bafd-9bbd54b4c838",
+		"name": "Back End Genre Classification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "LSTM Prediction",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "file",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "audio_sample/jazz-test-2.wav"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict/lstm",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict",
+						"lstm"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GRU Prediction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "audio_sample/rock.00082.wav"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/predict/gru",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"predict",
+						"gru"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
