@@ -22,6 +22,8 @@ def flask_app():
         kss = prediction.Keyword_Spotting_Service_LSTM()
         predicted_genre, confidence_value = kss.predict(file_name)
 
+        prediction.clear_instance()
+
         os.remove(file_name)
 
         #return result as JSON
@@ -42,6 +44,8 @@ def flask_app():
         # instantiate keyword spotting service singleton and get prediction
         kss = prediction.Keyword_Spotting_Service_GRU()
         predicted_genre, confidence_value = kss.predict(file_name)
+
+        prediction.clear_instance()
 
         os.remove(file_name)
 
