@@ -23,7 +23,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/D:/SUESTIANA/kuliah/smt 9/Deep Learning/Tubes/sample/jazz_01.m4a"
+							"src": "audio_sample/jazz-test-2.wav"
 						}
 					]
 				},
@@ -56,7 +56,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": "/D:/SUESTIANA/kuliah/smt 9/Deep Learning/Tubes/sample/jazz.00091.wav"
+							"src": "audio_sample/rock.00082.wav"
 						}
 					]
 				},
