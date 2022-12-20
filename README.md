@@ -65,8 +65,7 @@ Anggota kelompok :
     - Body
       ```
       {
-        "key": "file",
-        "type": "file"
+        file : string
       }
       ```
     - Response
@@ -86,8 +85,7 @@ Anggota kelompok :
     - Body
       ```
       {
-        "key": "file",
-        "type": "file"
+        file : string
       }
       ```
     - Response
