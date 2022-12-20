@@ -2,7 +2,7 @@
 Anggota kelompok :
   1. Komang Kurnia Suestiana (1805551121) -- Git username : komangkurnia
   2. I Putu Udayana Setya Ananta (1805551151) -- Git username : udayanapo
-  3. Nathania Novenrodumetasa (1905551083) -- Git username : 
+  3. Nathania Novenrodumetasa (1905551083) -- Git username : thachannyan
   
 ## Deskripsi Aplikasi
 
@@ -31,6 +31,17 @@ Anggota kelompok :
 ## Cara Menjalankan Aplikasi
 
 ### Front End
+
+* Masuk ke direktori folder ```front-end```, kemudian start dengan mengetikkan perintah berikut ini
+  ```bash
+  npm start
+  ```
+* Akan diarahkan ke front-end di browser
+  Local:            http://localhost:3000
+  On Your Network:  http://192.168.0.119:3000
+* Klik tombol "Rekam Audio" kemudian "Stop Rekam". Jika ingin mengecek audio yang sudah direkam bisa langsung di play
+* Untuk melakukan cek genre musik klik tombol "Check Genre"
+
 
 ### Back End
 
