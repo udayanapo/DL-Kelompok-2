@@ -48,7 +48,7 @@ class _Keyword_Spotting_Service:
         predicted_index = np.argmax(predictions)
         predicted_keyword = self._mapping[predicted_index]
         predictions_confidence = np.max(predictions)
-        
+
         return predicted_keyword, predictions_confidence
 
 
@@ -96,3 +96,6 @@ def Keyword_Spotting_Service_GRU():
         _Keyword_Spotting_Service._instance = _Keyword_Spotting_Service()
         _Keyword_Spotting_Service.model = tf.keras.models.load_model(GRU_MODEL_PATH)
     return _Keyword_Spotting_Service._instance
+
+def clear_instance():
+    _Keyword_Spotting_Service._instance = None
