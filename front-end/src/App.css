@@ -1,0 +1,28 @@
+.App {
+    display: flex;
+    background-image: url(./background.png);
+    background-size: 1000pt;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+  }
+
+  .p1 {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+ 
+  .judul {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+
+  input {
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+  }
+  
