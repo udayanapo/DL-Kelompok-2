@@ -62,6 +62,13 @@ Anggota kelompok :
       /predict/lstm
       ```
     - Method ``` POST ```
+    - Body
+      ```
+      {
+        "key": "file",
+        "type": "file"
+      }
+      ```
     - Response
       ``` bash
       {
@@ -76,6 +83,13 @@ Anggota kelompok :
       /predict/gru
       ```
     - Method ``` POST ```
+    - Body
+      ```
+      {
+        "key": "file",
+        "type": "file"
+      }
+      ```
     - Response
       ``` bash
       {
