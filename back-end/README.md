@@ -3,7 +3,7 @@
 ## Instalasi
 
 * Lakukan Cloning terhadap repository ini
-* Masuk ke direktori folder, lalu buat virtual environment dengan mengetikkan perintah berikut ini
+* Masuk ke direktori folder ```back-end```, lalu buat virtual environment dengan mengetikkan perintah berikut ini
   ``` bash 
   python -m venv genre-venv
   ``` 
@@ -18,7 +18,7 @@
   ```
 * Untuk menjalankan flask dapat menggunakan perintah berikut
   ``` bash
-  flask -app server run
+  flask --app server run
   ```
   
  ## End Point API
@@ -28,10 +28,11 @@
       /predict/lstm
       ```
     - Method ``` POST ```
-    - Output
+    - Response
       ``` bash
       {
-        "genre": "Classical"
+        "confidence": Float
+        "genre": String
       }
       ```
       
@@ -41,9 +42,10 @@
       /predict/gru
       ```
     - Method ``` POST ```
-    - Output
+    - Response
       ``` bash
       {
-        "genre": "Classical"
+        "confidence": Float
+        "genre": String
       }
       ```
